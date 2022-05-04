@@ -10,7 +10,15 @@ def generate_key():
 def cargar_key():
     return open("key.key","r").read()
 
-
+def encrypt_file(file,key):
+    llave = Fernet(key)
+    with open(file,"rb") as f:
+        f_data = f.read()
+        f.close()
+    encrypt_data = llave.encrypt(f_data)
+    with open(file,"wb") as f:
+        f.write(encrypt_data)
+        f.close()
 
 
 
@@ -19,5 +27,4 @@ if __name__ == "__main__":
     k = cargar_key()
     print(k)
 
-    k1 = Fernet(Fernet.generate_key())
-    k1.encrypt(b"hola mundo")
+    encrypt_file("texto.txt",k)
