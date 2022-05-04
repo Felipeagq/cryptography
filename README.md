@@ -16,7 +16,7 @@ b'my deep dark secret'
 ```
 
 ## Metodo MultiFernet
-```
+```python
 >>>from cryptography.fernet import Fernet, MultiFernet
 >>>key1 = Fernet(Fernet.generate_key())
 >>>key2 = Fernet(Fernet.generate_key())
