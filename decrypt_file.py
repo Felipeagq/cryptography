@@ -18,4 +18,4 @@ def decrypt_file(file,key):
 
 if __name__ == "__main__":
     k = cargar_key()
-    decrypt_file("texto.txt",k)
+    decrypt_file("texto.yml",k)

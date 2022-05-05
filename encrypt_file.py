@@ -27,4 +27,4 @@ if __name__ == "__main__":
     k = cargar_key()
     print(k)
 
-    encrypt_file("texto.txt",k)
+    encrypt_file("texto.yml",k)
